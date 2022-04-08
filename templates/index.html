@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Number Game</title>
+</head>
+<body>
+    <style>
+        .reset-button{
+            visibility: {{ reset }};
+        }
+    </style>
+    <h1>Welcome to the Great Number Game</h1>
+    <h2>I am thinking of a number between 1 and 100</h2>
+    <h3>Take a Guess!</h3>
+    <h4>{{ hi_lo }}</h4>
+    <form class="reset-button" action="/reset" method="post">
+        <button class="reset-button" name="reset">Try Again</button>
+    </form>
+    <form action="/game" method="post">
+        <input type="number" name="guess">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
